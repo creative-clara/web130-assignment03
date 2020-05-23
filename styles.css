@@ -1,0 +1,137 @@
+/**
+ * Sizes
+ * ======
+ *  - sm: < 40em
+ *  - md: 40em < 64em
+ *  - lg: 64em and greater
+ */
+nav {
+  font-family: Inconsolata;
+  font-style: thick;
+}
+nav ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  background-color: #2DA9FF;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+@media screen and (max-width: 39.99em) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  nav ul.submenu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border: solid white;
+    border-width: 2px 0 0 0;
+  }
+}
+@media screen and (min-width: 64em) {
+  nav ul.submenu {
+    position: absolute;
+    flex-direction: column;
+    margin-left: 2px;
+  }
+}
+@media screen and (min-width: 64em) {
+  nav #products {
+    border: solid white;
+    border-width: 0 2px;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  nav #products {
+    border: solid white;
+    border-width: 0 2px 0 2px;
+  }
+}
+nav li {
+  position: relative;
+  display: block;
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  nav li {
+    position: static;
+    flex-grow: 1;
+  }
+}
+nav a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+@media screen and (min-width: 64em) {
+  nav a {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 39.99em) {
+  nav a.mainNavbar {
+    border-bottom: 2px solid white;
+  }
+  nav a.lastSubmenu {
+    border-bottom: 2px solid white;
+  }
+}
+nav a:focus {
+  background-color: #0A75BE;
+}
+nav a .menu-icon {
+  display: block;
+  float: left;
+  width: 34px;
+  margin-right: -34px;
+  height: 22px;
+  background-image: url("/img/Hamburger.png");
+}
+nav a .menu-icon.open {
+  width: 27px;
+  margin-right: -27px;
+  height: 27px;
+  background-image: url("/img/X-Icon.png");
+}
+
+/**
+ * Sizes
+ * ======
+ *  - sm: < 40em
+ *  - md: 40em < 64em
+ *  - lg: 64em and greater
+ */
+body {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-only {
+  display: none;
+}
+@media screen and (max-width: 39.99em) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+.tablet-only {
+  display: none;
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  .tablet-only {
+    display: block;
+  }
+}
+
+.desktop-only {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
